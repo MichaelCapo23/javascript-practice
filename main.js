@@ -6,12 +6,25 @@ function reverse1(str) {
 }
 
 function reverse2(str) {
+    debugger;
     let strArr = str.split("");
-    for(let index = 0; index < strArr.length - 1; index++) {
-        strArr[index] = str[strArr - (index + 1)];
-        console.log(strArr);
+    let reverseArr = [];
+    for(let index = 0; index < strArr.length; index++) {
+        reverseArr[index] = strArr[strArr.length - (index + 1)];
+        console.log(reverseArr);
     }
-    return strArr
+    return reverseArr
+}
+
+function reverse3(str) {
+    debugger;
+    let strArr = str.split("");
+    let reverseArr = [];
+    for(let index = 0; index < strArr.length; index++) {
+        reverseArr[strArr.length - (index + 1)] = strArr[index];
+        // console.log(reverseArr);
+    }
+    return reverseArr
 
 }
 
@@ -19,4 +32,6 @@ function reverse2(str) {
 let newString = reverse1(str);
 console.log("string1: ", newString);
 let newstr2 = reverse2(str);
+let newStr3 = reverse3(str);
 console.log(newstr2);
+console.log("str3: ", newStr3)
