@@ -8,10 +8,8 @@ function reverse1(str) {
 function reverse2(str) {
     let strArr = str.split("");
     for(let index = 0; index < strArr.length - 1; index++) {
-        debugger;
-        let temp = strArr[index];
-        strArr[index] = strArr[strArr.length - (index + 1)];
-        strArr[strArr.length - (index + 1)] = temp;
+        strArr[index] = str[strArr - (index + 1)];
+        console.log(strArr);
     }
     return strArr
 
