@@ -6,15 +6,15 @@ function arraySum(arr) {
     let sum = 0;
     function itemSum(arr) {
         arr.forEach(function (item) {
-            if(typeof item === 'array') {
-                sum += itemSum(item);
+            if(typeof item === 'object') {
+                sum = itemSum(item);
             } else if (typeof item === 'number') {
                 sum += item;
             }
         })
-        let sumItem = itemSum(item);
-        return sumItem
+        return sum;
     }
+    itemSum(arr);
     return sum;
 }
 
